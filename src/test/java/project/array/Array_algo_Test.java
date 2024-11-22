@@ -1,7 +1,8 @@
-package project;
+package project.array;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import project.array.Array_algo;
 
 import java.util.ArrayList;
 import java.util.Arrays;

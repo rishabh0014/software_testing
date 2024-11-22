@@ -1,4 +1,4 @@
-package project;
+package project.array;
 
 import java.util.*;
 
@@ -225,7 +225,7 @@ public class Array_algo {
                 cnt1--; cnt2--;
             }
         }
-        List<Integer> ls = new ArrayList<>(); 
+        List<Integer> ls = new ArrayList<>();
         cnt1 = 0; cnt2 = 0;
         for (int i = 0; i < n; i++) {
             if (v[i] == el1) cnt1++;
