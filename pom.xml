@@ -56,6 +56,37 @@
                     <verbose>true</verbose>
                     <timeoutConstant>10000</timeoutConstant>
                     <threads>4</threads>
+
+<!--                    <mutators>-->
+<!--                        <mutator>CONDITIONALS_BOUNDARY</mutator>-->
+<!--                        <mutator>EMPTY_RETURNS</mutator>-->
+<!--                        <mutator>FALSE_RETURNS</mutator>-->
+<!--                        <mutator>INCREMENTS</mutator>-->
+<!--                        <mutator>INVERT_NEGS</mutator>-->
+<!--                        <mutator>MATH</mutator>-->
+<!--                        <mutator>NEGATE_CONDITIONALS</mutator>-->
+<!--                        <mutator>NULL_RETURNS</mutator>-->
+<!--                        <mutator>PRIMITIVE_RETURNS</mutator>-->
+<!--                        <mutator>TRUE_RETURNS</mutator>-->
+<!--                        <mutator>VOID_METHOD_CALLS</mutator>-->
+<!--                        <mutator>NON_VOID_METHOD_CALLS</mutator>-->
+<!--                        <mutator>EXPERIMENTAL_ARGUMENT_PROPAGATION</mutator>-->
+<!--                        <mutator>EXPERIMENTAL_NAKED_RECEIVER</mutator>-->
+
+<!--                        All    -->
+<!--                        <mutator>ALL</mutator>-->
+
+<!--                        Default-->
+<!--                        <mutator>DEFAULTS</mutator>                        -->
+
+<!--                        More Comprehensive Testing-->
+<!--                        <mutator>STRONGER</mutator>-->
+<!--                    </mutators>-->
+
+
+
+
+
                 </configuration>
                 <dependencies>
                     <dependency>
