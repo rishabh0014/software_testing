@@ -2,13 +2,12 @@ package project.array;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import project.array.Array_algo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Array_algo_Test {
+public class Array_Algo_Test {
 
     @Test
     public void towSumTest(){
