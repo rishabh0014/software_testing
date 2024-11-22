@@ -1,1 +1,1 @@
-![sample PIT report](image.png)
+![img.png](img.png)
