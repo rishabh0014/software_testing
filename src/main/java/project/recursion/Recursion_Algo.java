@@ -35,7 +35,6 @@ public class Recursion_Algo {
         }
     }
 
-    // Fibonacci Series
     public int fibonacci(int n) {
         if (n <= 1) {
             return n;
@@ -43,8 +42,6 @@ public class Recursion_Algo {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
-
-    // Tower of Hanoi
 
     public void towerOfHanoi(int disks, char source, char auxiliary, char destination) {
         if (disks == 1) {
