@@ -95,30 +95,26 @@ public class Array_algo {
     }
 
     public static int getLongestSubarray(int []a, int k) {
-        int n = a.length; // size of the array.
+        int n = a.length;
 
         Map<Integer, Integer> preSumMap = new HashMap<>();
         int sum = 0;
         int maxLen = 0;
         for (int i = 0; i < n; i++) {
-            //calculate the prefix sum till index i:
+
             sum += a[i];
 
-            // if the sum = k, update the maxLen:
             if (sum == k) {
                 maxLen = Math.max(maxLen, i + 1);
             }
 
-            // calculate the sum of remaining part i.e. x-k:
             int rem = sum - k;
 
-            //Calculate the length and update maxLen:
             if (preSumMap.containsKey(rem)) {
                 int len = i - preSumMap.get(rem);
                 maxLen = Math.max(maxLen, len);
             }
 
-            //Finally, update the map checking the conditions:
             if (!preSumMap.containsKey(sum)) {
                 preSumMap.put(sum, i);
             }
@@ -128,25 +124,21 @@ public class Array_algo {
 
 
     public static int getLongestSubarray(int []a, long k) {
-        int n = a.length; // size of the array.
+        int n = a.length;
 
-        int left = 0, right = 0; // 2 pointers
+        int left = 0, right = 0;
         long sum = a[0];
         int maxLen = 0;
         while (right < n) {
-            // if sum > k, reduce the subarray from left
-            // until sum becomes less or equal to k:
             while (left <= right && sum > k) {
                 sum -= a[left];
                 left++;
             }
 
-            // if sum = k, update the maxLen i.e. answer:
             if (sum == k) {
                 maxLen = Math.max(maxLen, right - left + 1);
             }
 
-            // Move forward thw right pointer:
             right++;
             if (right < n) sum += a[right];
         }
@@ -156,28 +148,28 @@ public class Array_algo {
 
 
     public static ArrayList<Integer> FindUnion(int arr1[], int arr2[], int n, int m) {
-        int i = 0, j = 0; // pointers
-        ArrayList<Integer > Union=new ArrayList<>(); // Uninon vector
+        int i = 0, j = 0;
+        ArrayList<Integer > Union=new ArrayList<>();
         while (i < n && j < m) {
-            if (arr1[i] <= arr2[j]) // Case 1 and 2
+            if (arr1[i] <= arr2[j])
             {
                 if (Union.size() == 0 || Union.get(Union.size()-1) != arr1[i])
                     Union.add(arr1[i]);
                 i++;
-            } else // case 3
+            } else
             {
                 if (Union.size() == 0 || Union.get(Union.size()-1) != arr2[j])
                     Union.add(arr2[j]);
                 j++;
             }
         }
-        while (i < n) // IF any element left in arr1
+        while (i < n)
         {
             if (Union.get(Union.size()-1) != arr1[i])
                 Union.add(arr1[i]);
             i++;
         }
-        while (j < m) // If any elements left in arr2
+        while (j < m)
         {
             if (Union.get(Union.size()-1) != arr2[j])
                 Union.add(arr2[j]);
@@ -189,28 +181,18 @@ public class Array_algo {
 
     public static int missingNumber(int []a, int N) {
 
-        // Outer loop that runs from 1 to N:
         for (int i = 1; i <= N; i++) {
 
-            // flag variable to check
-            //if an element exists
             int flag = 0;
 
-            //Search the element using linear search:
             for (int j = 0; j < N - 1; j++) {
                 if (a[j] == i) {
                     flag = 1;
                     break;
                 }
             }
-            // check if the element is missing
-            //i.e flag == 0:
-
             if (flag == 0) return i;
         }
-
-        // The following line will never execute.
-        // It is just to avoid warnings.
         return -1;
     }
 
@@ -226,10 +208,10 @@ public class Array_algo {
     }
 
     public List<Integer> majorityElementNBy3(int []v) {
-        int n = v.length; //size of the array
-        int cnt1 = 0, cnt2 = 0; // counts
-        int el1 = Integer.MIN_VALUE; // element 1
-        int el2 = Integer.MIN_VALUE; // element 2
+        int n = v.length;
+        int cnt1 = 0, cnt2 = 0;
+        int el1 = Integer.MIN_VALUE;
+        int el2 = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (cnt1 == 0 && el2 != v[i]) {
                 cnt1 = 1;
@@ -243,7 +225,7 @@ public class Array_algo {
                 cnt1--; cnt2--;
             }
         }
-        List<Integer> ls = new ArrayList<>(); // list of answers
+        List<Integer> ls = new ArrayList<>(); 
         cnt1 = 0; cnt2 = 0;
         for (int i = 0; i < n; i++) {
             if (v[i] == el1) cnt1++;
