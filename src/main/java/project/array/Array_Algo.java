@@ -2,7 +2,7 @@ package project.array;
 
 import java.util.*;
 
-public class Array_algo {
+public class Array_Algo {
     public boolean twoSum(int []arr, int target) {
         Arrays.sort(arr);
         int n = arr.length;
