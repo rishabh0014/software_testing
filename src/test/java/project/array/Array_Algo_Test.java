@@ -13,8 +13,11 @@ public class Array_Algo_Test {
     public void towSumTest(){
 
         Array_Algo array_algo1 = new Array_Algo();
-        int[] arr1 = {1,9,3,7,8};
-        Assertions.assertTrue(array_algo1.twoSum(arr1,9));
+//        //removed call to java/util/Arrays::sort → SURVIVED
+//        int[] arr1 = {1,9,3,7,8};
+//        Assertions.assertTrue(array_algo1.twoSum(arr1,9));
+        int[] arr1 = {9,1,3,7,1};
+        Assertions.assertTrue(array_algo1.twoSum(arr1,12));
 
         Array_Algo array_algo2 = new Array_Algo();
         int[] arr2 = {3,7,8,9,1};
@@ -27,6 +30,11 @@ public class Array_Algo_Test {
         Array_Algo array_algo4 = new Array_Algo();
         int[] arr4 = {3,7,8,9,1};
         Assertions.assertFalse(array_algo4.twoSum(arr4,3));
+
+//        //changed conditional boundary → SURVIVED
+        Array_Algo array_algo5 = new Array_Algo();
+        int[] arr5 = {5,2,3,4,5};
+        Assertions.assertFalse(array_algo5.twoSum(arr5,4));
 
     }
 
@@ -41,11 +49,19 @@ public class Array_Algo_Test {
         int[] arr2 = {4, 1, 2, 6, 1, 7, 5};
         Assertions.assertEquals(array_algo2.majorityElement(arr2), -1);
 
-        int[] arr3 = {11, 33, 22, 33, 11, 33, 11};
+        int[] arr3 = {3,1,3,3,2};
         Array_Algo array_algo3 = new Array_Algo();
-        List<Integer> ans = array_algo3.majorityElementNBy3(arr3);
-        Assertions.assertEquals(ans, Arrays.asList(11, 33));
+        Assertions.assertEquals(array_algo3.majorityElement(arr3), 3);
 
+//      //added because => 29. } else if (el == k) cnt++; (cnt++ to cnt-- SURVIVED)
+        int[] arr4 = {3, 3, 4, 2, 3, 3, 3};
+        Array_Algo array_algo4 = new Array_Algo();
+        Assertions.assertEquals(array_algo4.majorityElement(arr4), 3);
+
+        //added because => 38.  if (cnt1 > (n / 2)) return el; (changed conditional boundary → SURVIVED)
+        int[] arr5 = {1,2,3,3};
+        Array_Algo array_algo5 = new Array_Algo();
+        Assertions.assertEquals(array_algo5.majorityElement(arr5), -1);
     }
 
     @Test
@@ -73,8 +89,6 @@ public class Array_Algo_Test {
         Assertions.assertEquals(Array_algo.maxProfit(arr), 40);
 
     }
-
-
 
     @Test
     public void trappingRainWaterTest() {
@@ -134,7 +148,6 @@ public class Array_Algo_Test {
 
     }
 
-
     @Test
     public void getLongestSubarrayTest() {
 
@@ -162,9 +175,11 @@ public class Array_Algo_Test {
         long k6 = 3;
         Assertions.assertEquals(2, Array_Algo.getLongestSubarray(arr6, k6));
 
-        int[] arr7 = {0, 0, 0, 0};
-        long k7 = 0;
-        Assertions.assertEquals(4, Array_Algo.getLongestSubarray(arr7, k7));
+        int[] arr7 = {5, 1, 2, 3};
+        long k7 = 3;
+        Assertions.assertEquals(2, Array_Algo.getLongestSubarray(arr7, k7));
+
+
 
     }
 
@@ -206,6 +221,12 @@ public class Array_Algo_Test {
         }
         Assertions.assertEquals(expected5, Array_Algo.FindUnion(arr9, arr10, arr9.length, arr10.length));
 
+//      //Added because => 153 while (i < n && j < m) (j<m to j<=m : SURVIVED)
+        int[] arr11 = {1, 3,5};
+        int[] arr12 = {2, 4};
+        ArrayList<Integer> expected6 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Assertions.assertEquals(expected6, Array_Algo.FindUnion(arr11, arr12, arr11.length, arr12.length));
+
     }
 
     @Test
@@ -228,6 +249,14 @@ public class Array_Algo_Test {
         Array_Algo array_algo1 = new Array_Algo();
         Assertions.assertEquals(array_algo1.maxProductSubArray(nums1), 20);
 
+    }
+
+    @Test
+    public void majorityElementTestNBy3() {
+        int[] arr3 = {11, 33, 22, 33, 11, 33, 11};
+        Array_Algo array_algo3 = new Array_Algo();
+        List<Integer> ans3 = array_algo3.majorityElementNBy3(arr3);
+        Assertions.assertEquals(ans3, Arrays.asList(11, 33));
     }
 
     @Test
