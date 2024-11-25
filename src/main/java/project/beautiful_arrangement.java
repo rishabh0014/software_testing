@@ -2,7 +2,7 @@ package project;
 
 import java.util.Arrays;
 
-public class beautiful_arrangement {
+public class Beautiful_Arrangement {
 
     int dp[][], n;
 
