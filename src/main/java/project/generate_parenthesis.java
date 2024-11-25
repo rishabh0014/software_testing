@@ -3,7 +3,7 @@ package project;
 import java.util.ArrayList;
 import java.util.List;
 
-public class generate_parenthesis {
+public class Generate_Parenthesis {
 
     public List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<String>();

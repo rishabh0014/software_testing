@@ -3,11 +3,11 @@ package project;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class beautiful_arrangement_test {
+public class Beautiful_Arrangement_Test {
 
     @Test
     public void testCountArrangementWithSmallNumbers() {
-        beautiful_arrangement ba = new beautiful_arrangement();
+        Beautiful_Arrangement ba = new Beautiful_Arrangement();
 
         // Test for n = 1
         Assertions.assertEquals(1, ba.countArrangement(1));
@@ -18,7 +18,7 @@ public class beautiful_arrangement_test {
 
     @Test
     public void testCountArrangementWithMediumNumbers() {
-        beautiful_arrangement ba = new beautiful_arrangement();
+        Beautiful_Arrangement ba = new Beautiful_Arrangement();
 
         // Test for n = 3
         Assertions.assertEquals(3, ba.countArrangement(3));
@@ -29,7 +29,7 @@ public class beautiful_arrangement_test {
 
     @Test
     public void testCountArrangementWithLargerNumbers() {
-        beautiful_arrangement ba = new beautiful_arrangement();
+        Beautiful_Arrangement ba = new Beautiful_Arrangement();
 
         // Test for n = 5
         Assertions.assertEquals(10, ba.countArrangement(5));
