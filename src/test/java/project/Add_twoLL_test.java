@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class Add_two_numbers_test {
+public class Add_twoLL_test {
 
     // Helper method to create a linked list from an array
     private ListNode createList(int[] values) {
@@ -37,7 +37,7 @@ public class Add_two_numbers_test {
 
     @Test
     public void testAddTwoNumbers_simpleCase() {
-        Add_two_numbers adder = new Add_two_numbers();
+        Add_Two_LL adder = new Add_Two_LL();
 
         ListNode l1 = createList(new int[] { 2, 4, 3 }); // Represents 342
         ListNode l2 = createList(new int[] { 5, 6, 4 }); // Represents 465
@@ -49,7 +49,7 @@ public class Add_two_numbers_test {
 
     @Test
     public void testAddTwoNumbers_withCarryOver() {
-        Add_two_numbers adder = new Add_two_numbers();
+        Add_Two_LL adder = new Add_Two_LL();
 
         ListNode l1 = createList(new int[] { 9, 9, 9 }); // Represents 999
         ListNode l2 = createList(new int[] { 1 }); // Represents 1
@@ -61,7 +61,7 @@ public class Add_two_numbers_test {
 
     @Test
     public void testAddTwoNumbers_differentLengths() {
-        Add_two_numbers adder = new Add_two_numbers();
+        Add_Two_LL adder = new Add_Two_LL();
 
         ListNode l1 = createList(new int[] { 2, 4 }); // Represents 42
         ListNode l2 = createList(new int[] { 5, 6, 4 }); // Represents 465
@@ -73,7 +73,7 @@ public class Add_two_numbers_test {
 
     @Test
     public void testAddTwoNumbers_withZeroes() {
-        Add_two_numbers adder = new Add_two_numbers();
+        Add_Two_LL adder = new Add_Two_LL();
 
         ListNode l1 = createList(new int[] { 0 }); // Represents 0
         ListNode l2 = createList(new int[] { 0 }); // Represents 0
@@ -85,7 +85,7 @@ public class Add_two_numbers_test {
 
     @Test
     public void testAddTwoNumbers_emptyInput() {
-        Add_two_numbers adder = new Add_two_numbers();
+        Add_Two_LL adder = new Add_Two_LL();
 
         ListNode l1 = null; // Represents an empty list
         ListNode l2 = createList(new int[] { 1, 2, 3 }); // Represents 321

@@ -1,6 +1,6 @@
 package project;
 
-public class Add_two_numbers {
+public class Add_Two_LL {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode tail = dummyHead;
