@@ -57,7 +57,7 @@
                     <timeoutConstant>10000</timeoutConstant>
                     <threads>4</threads>
 
-<!--                    <mutators>-->
+                    <mutators>
 <!--                        <mutator>CONDITIONALS_BOUNDARY</mutator>-->
 <!--                        <mutator>EMPTY_RETURNS</mutator>-->
 <!--                        <mutator>FALSE_RETURNS</mutator>-->
@@ -74,14 +74,14 @@
 <!--                        <mutator>EXPERIMENTAL_NAKED_RECEIVER</mutator>-->
 
 <!--                        All    -->
-<!--                        <mutator>ALL</mutator>-->
+                        <mutator>ALL</mutator>
 
 <!--                        Default-->
 <!--                        <mutator>DEFAULTS</mutator>                        -->
 
 <!--                        More Comprehensive Testing-->
 <!--                        <mutator>STRONGER</mutator>-->
-<!--                    </mutators>-->
+                    </mutators>
 
 
 
